@@ -25,7 +25,7 @@ Welcome to **Austin LangChain**, the convergence point for forward-thinkers in A
 
 ### 📅 Upcoming Events:
 - **AI Plugfest**: Early September. Dive into our repo, grab the guide, spot the quirks, fix 'em up, and have a fantastic time learning together!
-- **Deep Dive into LLMs**: Oct 10th, 7pm at the Tech Den.
+- **Deep Dive into LLMs**: Oct 10th, 7pm at the TBD.
 - **AGI Innovators Night**: Nov 4th, 6:30pm, Online.
 
 ---
