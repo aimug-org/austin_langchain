@@ -2,7 +2,7 @@ Got it! Let's modify the README to focus more on AI/AGI applications and Large L
 
 # Austin LangChain: GitHub README
 
-![Austin LangChain Logo](logos/colinmcnamara_a_logo_Sketch_Ideas_A_neural_network_node_with_th_871c7192-d0bd-4f29-8b9f-bf64771dc8dc.png)
+//![Austin LangChain Logo](logos/colinmcnamara_a_logo_Sketch_Ideas_A_neural_network_node_with_th_871c7192-d0bd-4f29-8b9f-bf64771dc8dc.png)
 
 
 Welcome to **Austin LangChain**, the convergence point for forward-thinkers in Austin dedicated to exploring the vast universe of AI, AGI applications, and Large Language Models (LLMs). If you're fascinated by the interplay of language, intelligence, and code, join our chain!
