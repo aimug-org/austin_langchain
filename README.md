@@ -1,8 +1,4 @@
-Got it! Let's modify the README to focus more on AI/AGI applications and Large Language Models (LLMs). Here's the revised version:
-
-# Austin LangChain: GitHub README
-
-![Austin LangChain Logo](path_to_logo_image.png)
+# Austin LangChain
 
 Welcome to **Austin LangChain**, the convergence point for forward-thinkers in Austin dedicated to exploring the vast universe of AI, AGI applications, and Large Language Models (LLMs). If you're fascinated by the interplay of language, intelligence, and code, join our chain!
 
@@ -24,7 +20,7 @@ Welcome to **Austin LangChain**, the convergence point for forward-thinkers in A
 
 ### 📅 Upcoming Events:
 - **AI Plugfest**: Early September. Dive into our repo, grab the guide, spot the quirks, fix 'em up, and have a fantastic time learning together!
-- **Deep Dive into LLMs**: Oct 10th, 7pm at the Tech Den.
+- **Deep Dive into LLMs**: Oct 10th, 7pm at the TBD.
 - **AGI Innovators Night**: Nov 4th, 6:30pm, Online.
 
 ---
