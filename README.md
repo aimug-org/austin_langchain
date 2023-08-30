@@ -1,4 +1,4 @@
-# Austin LangChain: GitHub README
+# Austin LangChain
 
 Welcome to **Austin LangChain**, the convergence point for forward-thinkers in Austin dedicated to exploring the vast universe of AI, AGI applications, and Large Language Models (LLMs). If you're fascinated by the interplay of language, intelligence, and code, join our chain!
 
