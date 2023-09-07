@@ -11,4 +11,4 @@ Charles
     * 
 
 ## Resources
-* Ollama LangChain setup - https://python.langchain.com/docs/guides/local_llms
+* Ollama LangChain setup - https://python.langchain.com/docs/lguides/local_llms
