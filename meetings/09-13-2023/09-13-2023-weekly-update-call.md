@@ -28,7 +28,7 @@
 * Broke appart the course into 101 & 102
 * Typing in the code may reinforce learning further
 
-### Review of lessons learned from dry run
+### Card game story of idea being incorporated into ChatGPT 
 * Key story to relate 
 * Training data used by default to chat.openai.com
 * Add to training deck
