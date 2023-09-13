@@ -1,19 +1,15 @@
-Certainly! Based on the structure of your current meeting notes, I've crafted a template that you can use for your LangChain users group meetings:
-
----
-
-# Meeting Notes Template - [Meeting Type] [Date]
+# Meeting Notes Template - Weekly Update 09-13-2023
 
 ## Overview
-* **Date:** [Date]
-* **Time:** [Start Time] - [End Time]
-* **Location:** [Location/Platform]
-* **Facilitator:** [Name of the person leading the meeting]
+* **Date:** 09-13-2023
+* **Time:** 2:00PM CST - [End Time]
+* **Location:** Google Meet
+* **Facilitator:** Colin McNamara
 
 ## Attendees
-* [Name 1]
-* [Name 2]
-* [Add more names as needed]
+* Colin McNamara
+* Charles Martin
+* Kevin Safford
 
 ## Agenda
 1. [Topic 1]
@@ -55,6 +51,3 @@ Certainly! Based on the structure of your current meeting notes, I've crafted a 
     * [Topic for next meeting]
     * [Topic for next meeting]
 
----
-
-You can fill in the placeholders (e.g., [Meeting Type], [Date], [Name 1], etc.) with the relevant details for each meeting. This template provides a structured format that covers the main aspects of a meeting, including attendees, agenda, discussion points, action items, announcements, and details about the next meeting.
