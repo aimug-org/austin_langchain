@@ -12,42 +12,43 @@
 * Kevin Safford
 
 ## Agenda
-1. [Topic 1]
-    * [Sub-topic or detail]
-    * [Sub-topic or detail]
-2. [Topic 2]
-    * [Sub-topic or detail]
-3. [Add more topics as needed]
+1. Review of lessons learned from dry run
+
+2. 52 Card game deck stolen by ChatGPT
+    * Key story to relate 
+    * Training data used by default to chat.openai.com
+3. Meeting Space
+    * Springdale Station / Pershing
 
 ## Discussion Points
 
-### [Topic 1]
-* [Key point or update]
-* [Discussion or decision made]
-* [Action items or follow-ups]
+### Review of lessons learned from dry run
+*  That version of 101 took 3 hours
+* Concepts slide took 30+ minutes
+* Broke appart the course into 101 & 102
+* Typing in the code may reinforce learning further
 
-### [Topic 2]
-* [Key point or update]
-* [Discussion or decision made]
-* [Action items or follow-ups]
+### Review of lessons learned from dry run
+* Key story to relate 
+* Training data used by default to chat.openai.com
+* Add to training deck
 
-### [Add more topics as needed]
+### In person dates
+* target beginning of October
 
 ## Action Items
-* [Action 1] - Assigned to [Name]
-* [Action 2] - Assigned to [Name]
-* [Add more actions as needed]
+* Follow up with Dan Graham - Charles Martin
+* Follow up wit Persing - Colin McNamara
 
 ## Announcements
-* [Announcement 1]
-* [Announcement 2]
-* [Add more announcements as needed]
+* Discord is available - https://discord.gg/SDwD254V
+* Kevin on his way back to Austin
 
 ## Next Meeting
-* **Date:** [Next meeting date]
-* **Time:** [Start Time] - [End Time]
-* **Location:** [Location/Platform]
+* **Date:** 09-20-2023
+* **Time:** 2:00PM CST - [End Time]
+* **Location:** Google Meet - https://meet.google.com/wvi-iehn-wnj
 * **Agenda Items to Consider:** 
-    * [Topic for next meeting]
-    * [Topic for next meeting]
+    * In person meetup location
+    * Area's to collaborate on
 
