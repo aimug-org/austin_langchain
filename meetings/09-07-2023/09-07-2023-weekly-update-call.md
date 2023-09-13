@@ -1,9 +1,10 @@
 # Meeting Notes - Weekly Status Call 09-07-2023
 
+## Location
+Google Meet 
 ## Attendees
-Colin
-
-Charles
+Colin McNamara
+Charles Martin
 
 ## Topics
 
