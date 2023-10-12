@@ -33,7 +33,7 @@ Welcome to **Austin LangChain**, the convergence point for forward-thinkers in A
 
 ### 📣 Stay Connected:
 - **Twitter**: Get quick insights and news by following us [@AustinLangChain](#).
-- **Discord**: Join our AI-powered discourse, voice sessions, and brainstorming marathons. https://discord.gg/SDwD254V
+- **Discord**: Join our AI-powered discourse, voice sessions, and brainstorming marathons. [https://discord.gg/SDwD254V](https://discord.gg/fjQfpwcsZX)
 - **MeetUp**: Join our meetup for in-person and remote sessions. https://www.meetup.com/austin-langchain-ai-group/
 
 ---
