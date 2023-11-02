@@ -20,7 +20,8 @@ Welcome to **Austin LangChain**, the convergence point for forward-thinkers in A
 
 ### 📅 Upcoming Events:
 - **LangChain 101**: October 11th, 6:00 PM at 1204 San Antonio. Details and registration [here](https://www.meetup.com/austin-langchain-ai-group/events/296499443/).
-- **LangChain 101 - Remote**: November 1st [here](https://www.meetup.com/austin-langchain-ai-group/events/296856859/)
+- **LangChain 101 - Remote**: November 1st [Google Meet](https://www.meetup.com/austin-langchain-ai-group/events/296856859/)
+- **Community Call** Nov 2 @ 2pm Central - [Google Meet](https://meet.google.com/wvi-iehn-wnj)
 - **LangChain 102**: - November 14th, 6:00 PM at 1204 San Antonio
 
 ---
