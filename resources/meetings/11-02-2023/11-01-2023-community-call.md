@@ -23,6 +23,20 @@
 
 ## Discussion Points
 
+### The Gist
+
+**Eleven Fourteen Event Planning:** Planning for Eleven Fourteen event showcase
+**Karim's Implementation:** Live walkthrough of Karims Mistral Seven B implementation
+**Running Code Locally vs Hosted Model:** Comparison between ChatGPT API and local model
+**Notebook Structure:** Building notebooks from scratch for portable lab experience
+**Contribution Back To The Community:** Contributing back through pull request or lab notebook structure
+**Creating a new lab folder:** The group discusses creating a new lab folder for the project.
+**Implementing Lang Serve:** Karim plans to implement Lang Serve for enhanced rag groups.
+**Community Call:** The group discusses growing the community and improving future events.
+**Technical Discussion:** The group discusses technical details for their upcoming event.
+**Weekly Check-ins:** "Weekly check-ins" are planned leading up to showcase event.
+
+
 ### 11/1 Virtual Recap Review
 * Karim mentioned that it was "great"
 * Colin found the audio issues, tied to Krisp and Google meet
