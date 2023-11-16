@@ -1,0 +1,4 @@
+langchain==0.0.321
+llama_cpp_python==0.2.11
+huggingface_hub==0.18.0
+streamlit==1.27.2
