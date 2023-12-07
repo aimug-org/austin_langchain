@@ -8,7 +8,7 @@
 * **Facilitator:** Colin McNamara
 
 ## Attendees
-* [Name 1]
+* Colin McNamara
 * [Name 2]
 * [Add more names as needed]
 
