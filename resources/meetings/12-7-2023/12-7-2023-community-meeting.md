@@ -1,5 +1,4 @@
-
-# Community Meeting - 12/7/2023
+ Community Meeting - 12/7/2023
 
 ## Overview
 * **Date:** 12/7/2023
@@ -9,8 +8,8 @@
 
 ## Attendees
 * Colin McNamara
-* [Name 2]
-* [Add more names as needed]
+* Karim Lalani
+* Charles Martin
 
 ## Agenda
 Proposed Topics:
@@ -36,12 +35,17 @@ Spring Learnathon/Hackathon Discussion
 ## Discussion Points
 
 ### December Meetup Planning
-* [Key point or update]
-* [Discussion or decision made]
-* [Action items or follow-ups]
+* Charles checking reserved dates
+* 12/14 should be available - @charles martin to make request
+* Supplies 
+	* Nametags and Beverages
+* Showcase 
+* Plugfest - Docker, .env files, langserve, multi-modal RAG, Streamlit, 
+* 
 
 ### LangChain team alignment
-* [Key point or update]
+* Harrison reached out
+	* Schwag 
 * [Discussion or decision made]
 * [Action items or follow-ups]
 
