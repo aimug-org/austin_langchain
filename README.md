@@ -20,15 +20,15 @@ Welcome to **Austin LangChain**, the convergence point for forward-thinkers in A
 
 ### 📅 Events:
 
-**Happy Hour Mixer** - Meeting up and hanging out at Central Machine Works on November 30th at 5:30 [East Side Mixer](https://www.meetup.com/austin-langchain-ai-group/events/297407244/)
+* **Happy Hour Mixer** - Meeting up and hanging out at Central Machine Works on November 30th at 5:30 [East Side Mixer](https://www.meetup.com/austin-langchain-ai-group/events/297407244/)
 
-**LangChain 102**: LangServe & LangSmith - November 14th, 6:00 PM at 1204 San Antonio [In Person Meetup](https://www.meetup.com/austin-langchain-ai-group/events/297140581/)
+* **LangChain 102**: LangServe & LangSmith - November 14th, 6:00 PM at 1204 San Antonio [In Person Meetup](https://www.meetup.com/austin-langchain-ai-group/events/297140581/)
 
-**Community Call** - Nov 2 @ 2pm Central - [Google Meet](https://meet.google.com/wvi-iehn-wnj)
+* **Community Call** - Nov 2 @ 2pm Central - [Google Meet](https://meet.google.com/wvi-iehn-wnj)
 
-**LangChain 101 - Remote**: November 1st [Google Meet](https://www.meetup.com/austin-langchain-ai-group/events/296856859/) **Presentation** [LC101](https://github.com/colinmcnamara/austin_langchain/blob/main/resources/presentations/LangChain%20101.pdf)
+* **LangChain 101 - Remote**: November 1st [Google Meet](https://www.meetup.com/austin-langchain-ai-group/events/296856859/) **Presentation** [LC101](https://github.com/colinmcnamara/austin_langchain/blob/main/resources/presentations/LangChain%20101.pdf)
 
-**LangChain 101**: October 11th, 6:00 PM at 1204 San Antonio. Details and registration [here](https://www.meetup.com/austin-langchain-ai-group/events/296499443/). **Presentation** [LC101](https://github.com/colinmcnamara/austin_langchain/blob/main/resources/presentations/LangChain%20101.pdf)
+* **LangChain 101**: October 11th, 6:00 PM at 1204 San Antonio. Details and registration [here](https://www.meetup.com/austin-langchain-ai-group/events/296499443/). **Presentation** [LC101](https://github.com/colinmcnamara/austin_langchain/blob/main/resources/presentations/LangChain%20101.pdf)
 
 ---
 
