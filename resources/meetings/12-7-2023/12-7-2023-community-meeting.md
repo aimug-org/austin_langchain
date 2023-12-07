@@ -24,7 +24,10 @@ Spring Learnathon/Hackathon Discussion
 2. LangChain team alignment
     * Schwag Inbound
     * LangChain community visibility
-3. Spring Learnathon/Hackathon Discussion
+3. TechStrong Event (12/12/2023)
+    * Austin LangChain Participation
+    * Socials Plan
+4. Spring Learnathon/Hackathon Discussion
     * Spring 2022
     * Learnathon/Hackathon
     * LangChain team involvement
@@ -32,17 +35,20 @@ Spring Learnathon/Hackathon Discussion
 
 ## Discussion Points
 
-### [Topic 1]
+### December Meetup Planning
 * [Key point or update]
 * [Discussion or decision made]
 * [Action items or follow-ups]
 
-### [Topic 2]
+### LangChain team alignment
 * [Key point or update]
 * [Discussion or decision made]
 * [Action items or follow-ups]
 
-### [Add more topics as needed]
+### Spring Learnathon/Hackathon Discussion
+* [Key point or update]
+* [Discussion or decision made]
+* [Action items or follow-ups
 
 ## Action Items
 * [Action 1] - Assigned to [Name]
@@ -55,10 +61,10 @@ Spring Learnathon/Hackathon Discussion
 * [Add more announcements as needed]
 
 ## Next Meeting
-* **Date:** [Next meeting date]
-* **Time:** [Start Time] - [End Time]
-* **Location:** [Location/Platform]
+* **Date:** Thursday, 12/14/2023
+* **Time:** 2:00 - 2:25 PM
+* **Location:** https://meet.google.com/wvi-iehn-wnj
 * **Agenda Items to Consider:** 
-    * [Topic for next meeting]
-    * [Topic for next meeting]
+    * Final prep for December 14th Meetup
+    * Review of TechStrong Event (12/12/2023)
 
