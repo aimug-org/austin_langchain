@@ -10,6 +10,7 @@
 * Colin McNamara
 * Karim Lalani
 * Charles Martin
+* Scott Askinosie
 
 ## Agenda
 Proposed Topics:
@@ -55,7 +56,7 @@ Spring Learnathon/Hackathon Discussion
 * [Action items or follow-ups
 
 ## Action Items
-* [Action 1] - Assigned to [Name]
+* Get hall quotes for Learnathon/Hackathon @charles martin
 * [Action 2] - Assigned to [Name]
 * [Add more actions as needed]
 
