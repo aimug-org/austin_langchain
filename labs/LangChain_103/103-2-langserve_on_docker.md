@@ -81,7 +81,7 @@ docker run -p 8080:8080 -it --rm --env-file ~/.env langserve_lab
 ```
 
 6. observe:
-http://localhost/8080/research-assistant/playground
+http://localhost:8080/research-assistant/playground
 
 ## Docker Commands
 
