@@ -1,4 +1,3 @@
-```markdown
 # Developing LangChain with Docker
 
 This guide covers the steps to set up a development environment for LangChain using Docker. By the end of this guide, you will have a functional test environment for LangChain.
@@ -82,7 +81,7 @@ docker run -p 8080:8080 -it --rm --env-file ~/.env langserve_lab
 ```
 
 6. observe:
-http://localhost/8080/research-assistant/playground
+http://localhost:8080/research-assistant/playground
 
 ## Docker Commands
 
