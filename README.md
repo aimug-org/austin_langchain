@@ -19,6 +19,7 @@ Welcome to **Austin LangChain**, the convergence point for forward-thinkers in A
 ---
 
 ### 📅 Events:
+**LangChain 102** - Meeting at 1204 San Antonio 14 at 6:00 [In Person Meetup](https://www.meetup.com/austin-langchain-ai-group/events/297837958/)
 
 **Happy Hour Mixer** - Meeting up and hanging out at Central Machine Works on November 30th at 5:30 [East Side Mixer](https://www.meetup.com/austin-langchain-ai-group/events/297407244/)
 
