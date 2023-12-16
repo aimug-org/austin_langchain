@@ -19,6 +19,10 @@ Welcome to **Austin LangChain**, the convergence point for forward-thinkers in A
 ---
 
 ### 📅 Events:
+**Happy Hour Mixer** - Meeting at 1204 San Antonio 14 at 6:00 [In Person Meetup]([https://www.meetup.com/austin-langchain-ai-group/events/297837958/](https://www.meetup.com/austin-langchain-ai-group/events/297837958/))
+
+**LangChain 103** - Using LangServe, Steamlit, and Docker for local LangChain Development - Meeting at 1204 San Antonio 14 at 6:00 [In Person Meetup]([https://www.meetup.com/austin-langchain-ai-group/events/297837958/](https://www.meetup.com/austin-langchain-ai-group/events/297837958/))
+
 **LangChain 102** - Meeting at 1204 San Antonio 14 at 6:00 [In Person Meetup](https://www.meetup.com/austin-langchain-ai-group/events/297837958/)
 
 **Happy Hour Mixer** - Meeting up and hanging out at Central Machine Works on November 30th at 5:30 [East Side Mixer](https://www.meetup.com/austin-langchain-ai-group/events/297407244/)
@@ -41,10 +45,11 @@ Welcome to **Austin LangChain**, the convergence point for forward-thinkers in A
 ---
 
 ### 📣 Stay Connected:
-- **Twitter**: Get quick insights and news by following us. @AustinLangChain](https://twitter.com/AustinLangChain).
+
 - **Discord**: Join our AI-powered discourse, voice sessions, and brainstorming marathons. [https://discord.gg/SDwD254V](https://discord.gg/fjQfpwcsZX)
 - **MeetUp**: Join our meetup for in-person and remote sessions. https://www.meetup.com/austin-langchain-ai-group/
 - **YouTube**: Review and share learning hosted by our members. https://www.youtube.com/channel/UC03IXA4KU6hOQ_3YPTbS0ig
+- **Twitter**: Get quick insights and news by following us. @AustinLangChain](https://twitter.com/AustinLangChain).
 
 ---
 
