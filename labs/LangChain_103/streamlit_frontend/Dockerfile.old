@@ -1,0 +1,19 @@
+# Use the official Python image as the base image
+FROM python:3.8-slim
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy the Streamlit Python script into the container
+COPY streamlit_app.py /app
+
+# Install required dependencies
+RUN pip install --upgrade pip
+RUN pip install streamlit requests
+
+# Expose the port that Streamlit will run on
+EXPOSE 8501
+
+# Run the Streamlit app when the container starts
+CMD ["streamlit", "run", "your_streamlit_app.py"]
+
