@@ -19,9 +19,9 @@ Welcome to **Austin LangChain**, the convergence point for forward-thinkers in A
 ---
 
 ### 📅 Events:
-**Happy Hour Mixer** - Meeting at 1204 San Antonio 14 at 6:00 [In Person Meetup]([https://www.meetup.com/austin-langchain-ai-group/events/297837958/](https://www.meetup.com/austin-langchain-ai-group/events/297837958/))
+**Happy Hour Mixer** - TBD - Happy hour on the east side, maybe Full Circle on 12th and Chicon.They have skeeball, and is near a couple other fun places. 
 
-**LangChain 103** - Using LangServe, Steamlit, and Docker for local LangChain Development - Meeting at 1204 San Antonio 14 at 6:00 [In Person Meetup]([https://www.meetup.com/austin-langchain-ai-group/events/297837958/](https://www.meetup.com/austin-langchain-ai-group/events/297837958/))
+**LangChain 103** - Using LangServe, Steamlit, and Docker for local LangChain Development - December 14, 6:00 PM Meeting at 1204 San Antonio 14 [In Person Meetup]([https://www.meetup.com/austin-langchain-ai-group/events/297837958/](https://www.meetup.com/austin-langchain-ai-group/events/297837958/))
 
 **LangChain 102** - Meeting at 1204 San Antonio 14 at 6:00 [In Person Meetup](https://www.meetup.com/austin-langchain-ai-group/events/297837958/)
 
