@@ -17,3 +17,6 @@ This notebook takes the Ollama game to the next level by letting you do multimod
 This modified notebook uses the `bakllava` model which is `mistral-7b` model modified to incorporate `llava-v1.5`  
 architecture, which gives it `image to text` capabilities. Using this notebook, you can now upload an image file  
 and ask the LLM to describe it to you.
+5. [101-2-streamlit_document_search_ollama.ipynb](101-2-streamlit_document_search_ollama.ipynb)
+This notebook is a variation on the original [101-2-streamlit_document_search.ipynb](../101-2-streamlit_document_search.ipynb).
+It uses Ollama instead of OpenAI's API. The model used in here is Mistral 7b running locally using Ollama.
