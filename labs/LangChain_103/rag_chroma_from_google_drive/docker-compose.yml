@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    volumes:
+      - ${GOOGLE_APPLICATION_CREDENTIALS}:/app/.credentials/keys.json
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.streamlit
+    depends_on:
+      - api
+    ports:
+      - "8501:8501"

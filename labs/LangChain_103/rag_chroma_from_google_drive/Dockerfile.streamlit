@@ -1,0 +1,17 @@
+# Use an official Python runtime as a parent image
+FROM python:3.11-slim
+
+# Set the working directory in the container
+WORKDIR /usr/src/app
+
+# Install Streamlit
+RUN pip install streamlit
+
+# Copy the Streamlit app file into the container
+COPY streamlit_chat.py .
+
+# Make port 8501 available to the world outside this container
+EXPOSE 8501
+
+# Run Streamlit when the container launches
+CMD ["streamlit", "run", "streamlit_chat.py"]

@@ -1,4 +1,4 @@
-# run this file using 
+# run this file using
 # streamlit run streamlit_app.py
 
 import streamlit as st
@@ -18,13 +18,7 @@ input_text = st.text_area("Enter text:", "")
 if st.button("Convert to Ticket Lingo"):  # Updated button label
     if input_text:
         # Prepare the request payload in JSON format
-        payload = {
-            "input": {
-                "text": input_text
-            },
-            "config": {},
-            "kwargs": {}
-        }
+        payload = {"input": {"text": input_text}, "config": {}, "kwargs": {}}
 
         # Make a POST request to the API
         response = requests.post(api_url, json=payload)
@@ -38,4 +32,3 @@ if st.button("Convert to Ticket Lingo"):  # Updated button label
             st.error("API request failed. Please check the input and try again.")
     else:
         st.warning("Please enter some text to convert.")
-
