@@ -4,16 +4,15 @@ services:
   api:
     build:
       context: .
-      dockerfile: Dockerfile.api
+      dockerfile: Dockerfile
     environment:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
-      - LANGCHAIN_GOOGLE_DRIVE_FOLDER_ID=${LANGCHAIN_GOOGLE_DRIVE_FOLDER_ID}
     volumes:
       - ${GOOGLE_APPLICATION_CREDENTIALS}:/app/.credentials/keys.json
     ports:
-      - "8080:8080"
+      - "8000:8000"
 
-  streamlit-app:
+  frontend:
     build:
       context: .
       dockerfile: Dockerfile.streamlit

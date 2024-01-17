@@ -13,14 +13,19 @@ from langchain_core.runnables import RunnableParallel, RunnablePassthrough
 def create_chain(folder_id):
     loader = GoogleDriveLoader(
         folder_id=folder_id,
-        recursive=True,
+        recursive=False,
         # we need to use service_account_key to set google credentials because we're using docker to build the api. Langchain docs on GoogleDriveLoader makes no mention of this. Solution found here: https://github.com/langchain-ai/langchain/issues/8755
+        file_types=["document", "sheet", "pdf"],
         service_account_key=os.environ["GOOGLE_APPLICATION_CREDENTIALS"],
     )
     data = loader.load()
 
+    print("data: ", data)
+
     # Split
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=0)
+    text_splitter = RecursiveCharacterTextSplitter(
+        chunk_size=4000, chunk_overlap=0, separators=[" ", ",", "\n"]
+    )
     all_splits = text_splitter.split_documents(data)
 
     # Add to vectorDB
@@ -33,7 +38,6 @@ def create_chain(folder_id):
 
     # RAG prompt
     template = """
-    Youa are a helpful assistant that can query resume information.
     Answer the question based only on the following context:
     {context}
 
