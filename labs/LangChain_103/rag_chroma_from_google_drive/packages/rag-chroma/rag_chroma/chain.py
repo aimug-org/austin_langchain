@@ -20,11 +20,9 @@ def create_chain(folder_id):
     )
     data = loader.load()
 
-    print("data: ", data)
-
     # Split
     text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=4000, chunk_overlap=0, separators=[" ", ",", "\n"]
+        chunk_size=1000, chunk_overlap=200, separators=[" ", ",", "\n"]
     )
     all_splits = text_splitter.split_documents(data)
 
