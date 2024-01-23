@@ -15,7 +15,6 @@ def bind_and_run_llm(payload):
     return bound.invoke(prompt)
 
 
-@st.cache_data
 def get_service(service_account_key):
     return MyGDrive(service_account_key)
 
