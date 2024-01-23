@@ -1,4 +1,3 @@
-
 ## Instructions
 
 This directory contains the necessary files and instructions to set up and run the rag_chroma_from_google_drive project.
@@ -16,14 +15,15 @@ To use Google services, such as Google Drive, you need to set up Google credenti
 Before running the project, you need to set the following environment variables:
 
 - `GOOGLE_APPLICATION_CREDENTIALS`: Set this variable to the path where you saved the `keys.json` file earlier. Make sure to call out the full path or you will get an error
+- `OPENAI_API_KEY`
 
 ### Running Docker Compose
 
 Run the project using Docker Compose:
 
-  ```bash
+```bash
   docker-compose up --build
-  ```
+```
 
 This will build and start the necessary containers.
 
@@ -34,5 +34,3 @@ Access the project by opening a web browser and navigating to the specified URL
 Streamlit app: http://localhost:8501/
 
 Fast API Shema: http://localhost:8000/docs
-
-
