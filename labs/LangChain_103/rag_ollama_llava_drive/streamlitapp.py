@@ -29,7 +29,14 @@ def get_file_contents(_service: MyGDrive, fileId: str, encoded: bool):
     return _service.get_file_contents(fileId, encoded)
 
 
+if "uploaded_file_contents" not in st.session_state:
+    st.session_state["uploaded_file_contents"] = None
+
+if "gcloud_service_account" not in st.session_state:
+    st.session_state["gcloud_service_account"] = None
+
 st.title("Multimodal Chat")
+
 llm = Ollama(model="bakllava")
 
 image_prompt = PromptTemplate.from_template("{image}")
@@ -78,17 +85,29 @@ with st.sidebar:
             ):
         with open(gcloud_service_key_file.name, "wb") as f:
             f.write(gcloud_service_key_file.getvalue())
-        st.session_state["gcloud_service_account"] = gcloud_service_key_file.name
 
-if "gcloud_service_account" in st.session_state.keys():
+        if (
+            "gcloud_service_account" not in st.session_state
+            or st.session_state["gcloud_service_account"]
+            != gcloud_service_key_file.name
+        ):
+            st.session_state[
+                "gcloud_service_account"
+            ] = gcloud_service_key_file.name
+
+if st.session_state["gcloud_service_account"] is not None:
     mydrive = get_service(st.session_state["gcloud_service_account"])
+    files = get_files(mydrive)
+
+    st.sidebar.write(f"{len(files)} files fetched")
+
     for item in get_files(mydrive):
         if item["mimeType"][0:5] == "image":
             fileId = item["id"]
             fileName = item["name"]
             contents = get_file_contents(mydrive, fileId, False)
             st.sidebar.image(contents, width=100)
-            if st.sidebar.button("Use", key=fileId):
+            if st.sidebar.button(f"Use {fileName}", key=fileId):
                 on_upload_image(fileName, contents)
 
 if prompt := st.chat_input():
