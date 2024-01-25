@@ -1,5 +1,5 @@
 
-# Meeting Notes Template - Community Call 1-25-2024
+# Meeting Notes - Community Call 1-25-2024
 
 ## Overview
 * **Date:** 1-25-2024
