@@ -19,7 +19,7 @@ Welcome to **Austin LangChain**, the convergence point for forward-thinkers in A
 ---
 
 ### 📅 Events:
-**Turbochard your RAG with google drive ** Virtual - 2/7/2024 7:00 PM - 9:00 PM Central
+**Turbocharge your RAG with google drive** Virtual - 2/7/2024 7:00 PM - 9:00 PM Central
 
 Event Overview:
 Prepare for an evening filled with interactive and informative sessions:
