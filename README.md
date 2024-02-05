@@ -19,6 +19,20 @@ Welcome to **Austin LangChain**, the convergence point for forward-thinkers in A
 ---
 
 ### 📅 Events:
+**Turbochard your RAG with google drive ** Virtual - 2/7/2024 7:00 PM - 9:00 PM Central
+
+Event Overview:
+Prepare for an evening filled with interactive and informative sessions:
+
+Introduction to RAG and Google Drive: Explore how RAG is revolutionizing AI applications by leveraging the power of Google Drive.
+Hands-on Lab 1 - Implementing RAG with LangChain: Learn to integrate Google Drive documents into LangChain using Google Colab, an essential skill for modern AI applications.
+Hands-on Lab 2 - Pulling Google Drive Data into RAG with LangServe and Docker: Gain hands-on experience in deploying a RAG toolchain using LangServe in your local Docker environment.
+Hands-on Lab 3 - Describing Multi-modal Images with Local LLMs: Discover how to use local LLMs to interpret and describe images stored in Google Drive, a skill vital for various AI-driven analyses.
+Bonus Hands-on Lab 4 - Ingesting CSVs and Creating Reports: Dive into data analytics by learning to ingest CSV files and create comprehensive reports using Google Drive, LangChain, and Pandas.
+  https://www.meetup.com/austin-langchain-ai-group/events/298740501/
+
+
+
 **Happy Hour Mixer** - TBD - Happy hour on the east side, maybe Full Circle on 12th and Chicon.They have skeeball, and is near a couple other fun places. 
 
 **LangChain 103** - Using LangServe, Steamlit, and Docker for local LangChain Development - December 14, 6:00 PM Meeting at 1204 San Antonio 14 [In Person Meetup]([https://www.meetup.com/austin-langchain-ai-group/events/297837958/](https://www.meetup.com/austin-langchain-ai-group/events/297837958/))
