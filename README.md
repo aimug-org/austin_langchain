@@ -30,6 +30,7 @@ Hands-on Lab 2 - Pulling Google Drive Data into RAG with LangServe and Docker: G
 Hands-on Lab 3 - Describing Multi-modal Images with Local LLMs: Discover how to use local LLMs to interpret and describe images stored in Google Drive, a skill vital for various AI-driven analyses.
 Bonus Hands-on Lab 4 - Ingesting CSVs and Creating Reports: Dive into data analytics by learning to ingest CSV files and create comprehensive reports using Google Drive, LangChain, and Pandas.
   https://www.meetup.com/austin-langchain-ai-group/events/298740501/
+  Presentation - https://github.com/colinmcnamara/austin_langchain/blob/main/resources/presentations/Austin%20LangChain%202-7-2024%20GDrive%20with%20%20RAG.pdf
 
 
 
