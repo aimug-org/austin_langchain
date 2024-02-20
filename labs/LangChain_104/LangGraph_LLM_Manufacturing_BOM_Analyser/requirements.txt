@@ -1,0 +1,10 @@
+streamlit
+networkx
+pyvis
+matplotlib
+altair
+xlsxwriter
+openpyxl
+langgraph
+langchain
+langchain_openai
