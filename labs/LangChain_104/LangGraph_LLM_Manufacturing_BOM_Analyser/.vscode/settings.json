@@ -1,0 +1,5 @@
+{
+  "python.analysis.extraPaths": [
+    "./streamlit app/moc_data"
+  ]
+}
