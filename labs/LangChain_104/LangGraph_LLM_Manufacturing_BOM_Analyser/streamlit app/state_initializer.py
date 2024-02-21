@@ -12,3 +12,5 @@ def initialize_state():
 
     if "BOMGraph" not in state:
         state["BOMGraph"] = BOMGraph()
+    if "locals" not in state:
+        state["locals"] = {}

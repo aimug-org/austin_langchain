@@ -5,6 +5,7 @@ matplotlib
 altair
 xlsxwriter
 openpyxl
-langgraph
 langchain
+langchain_experimental
+langgraph
 langchain_openai
