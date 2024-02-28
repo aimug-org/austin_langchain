@@ -7,6 +7,9 @@
     },
     "mounts": [
         "source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig,target=/home/vscode/.gitconfig,type=bind"
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/vscode/.ssh,type=bind"
+]
+
     ],
     "extensions": [
         "ms-python.python",
