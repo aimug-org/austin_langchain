@@ -1,0 +1,11 @@
+langchain==0.1.7
+langchain-community==0.0.20
+langchain-core==0.1.22
+langchain-experimental==0.0.51
+langchain-openai==0.0.6
+langchainhub==0.1.15
+langgraph==0.0.24
+streamlit==1.32.2
+pydantic==2.6.1
+pydantic_core==2.16.2
+
