@@ -2,7 +2,12 @@ import base64
 import json
 import streamlit as st
 from graph import app, ollama_base_url, a_1111_base_url
-from langchain_core.messages import AIMessage, HumanMessage, FunctionMessage, BaseMessage
+from langchain_core.messages import (
+    AIMessage,
+    HumanMessage,
+    FunctionMessage,
+    BaseMessage
+)
 from pandas.io.common import BytesIO
 from PIL import Image
 
@@ -38,7 +43,11 @@ if uploaded_file := st.sidebar.file_uploader("Upload an image file",
                                              type=["jpg", "png"]):
     if st.session_state.uploaded_file != uploaded_file:
         st.session_state.uploaded_file = uploaded_file
-        st.session_state.image = base64.b64encode(uploaded_file.getvalue()).decode()
+        st.session_state.image = (
+            base64
+            .b64encode(uploaded_file.getvalue())
+            .decode()
+        )
         st.session_state.messages.append(
             HumanMessage(
                 content=uploaded_file.name,

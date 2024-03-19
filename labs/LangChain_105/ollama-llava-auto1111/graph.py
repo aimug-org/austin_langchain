@@ -5,10 +5,16 @@ import os
 import requests
 from langchain_community.chat_models import ChatOllama
 from langchain_community.llms import Ollama
-from langchain_core.messages import BaseMessage, AIMessage, HumanMessage, FunctionMessage
+from langchain_core.messages import (
+    BaseMessage,
+    AIMessage,
+    HumanMessage,
+    FunctionMessage
+)
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser, JsonOutputParser
 from langchain.pydantic_v1 import BaseModel, Field
+from langchain import hub
 from langchain.tools import tool
 from langgraph.graph import StateGraph, END
 from langgraph.prebuilt import ToolInvocation, ToolExecutor
@@ -73,8 +79,14 @@ class Txt2ImageInput(BaseModel):
 
 # txt2image tool
 @tool("txt2image", args_schema=Txt2ImageInput)
-def txt2image(prompt: str, **kwargs) -> Sequence[str]:
-    """An image generation tool that takes in a prompt as string and returns a list of images encoded in base64 string. The prompt is transformed from simple English to a comma separate MidJourney image generation prompt."""
+def txt2image(prompt: str, **kwargs) -> Dict:
+    (
+        "An image generation tool that takes in a prompt as string "
+        "and returns a json response with images encoded in base64 string. "
+        "The prompt is transformed from simple English "
+        "to a comma separate MidJourney image generation prompt."
+    )
+
     config = Config(prompt=prompt, **kwargs)
     if config.seed is None:
         config.seed = int(random.normal(scale=2**32))
@@ -92,15 +104,24 @@ class Image2TxtInput(BaseModel):
 # image2txt tool
 @tool("image2txt", args_schema=Image2TxtInput)
 def image2txt(prompt: str, image: str) -> str:
-    """An image description tool that takes in a question about an image or a picture as a prompt and returns the answer as string"""
-    no_image_error = "No image available within context. Upload an image or generate using prompt to describe it." 
+    (
+        "An image description tool that takes "
+        "in a question about an image or a picture as a prompt "
+        "and returns the answer as string"
+    )
+
+    no_image_error = (
+        "No image available within context. "
+        "Upload an image or generate using prompt to describe it."
+    )
+
     try:
         if image is None or len(image) == 0:
             return no_image_error
-        decoded = base64.b64decode(image)
-        del decoded
+        _ = base64.b64decode(image)
     except Exception:
         return no_image_error
+
     bound = image_llm.bind(images=[image])
     response: str = bound.invoke(prompt)
     return response.strip()
@@ -131,26 +152,18 @@ class OutputFormat(BaseModel):
 
 
 # prompt template for function calling chain
-fc_prompt = PromptTemplate.from_template("""SYSTEM: You are a helpful assistant with access to the following functions. Use them if required -
-{tools}
-
-The output needs to be in the following format:
-{{
-    'name': <function name>,
-    'arguments': <arguments to pass to the function>
-}}
-
-For questions not related to image generation or not about an image, respond with an empty json object.
-
-User: {question}
-FUNCTION: """, partial_variables={"tools": tool_descriptions})
+fc_prompt = (
+    hub
+    .pull("klcoder/mistral-functioncalling")
+    .partial(tools=tool_descriptions)
+)
 
 # function calling chain
 fc_chain = fc_prompt | fc_llm | JsonOutputParser(pydantic_object=OutputFormat)
 
 # prompt template for chat chain
-text_prompt = PromptTemplate.from_template("""You are a helpful agent. 
-Respond to user questions honestly and truthfully.
+text_prompt = PromptTemplate.from_template("""
+You are a helpful agent. Respond to user questions honestly and truthfully.
 
 Human: {question}
 AI: """)
@@ -195,11 +208,18 @@ def call_fc_model(state):
     last_message = messages[-1]
 
     response = fc_chain.invoke({"question": last_message.content})
-    if 'name' in response and response['name'] in [tool.name for tool in tools]:
+    if ('name' in response
+            and response['name'] in [tool.name for tool in tools]):
+
         args = response["arguments"]
+
         if "image" in state and state["image"] is not None:
             args["image"] = state["image"]
-        return {"messages": [AIMessage(name=response["name"], content="function", additional_kwargs=args)]}
+        return {"messages": [AIMessage(
+                    name=response["name"],
+                    content="function",
+                    additional_kwargs=args
+                )]}
     else:
         return {"messages": [last_message]}
 
@@ -220,7 +240,8 @@ def is_function_call(state):
 
     if isinstance(last_message, HumanMessage):
         return "human"
-    if isinstance(last_message, AIMessage) and last_message.content == "function":
+    if (isinstance(last_message, AIMessage)
+            and last_message.content == "function"):
         return "function"
     else:
         return "end"
