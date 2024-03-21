@@ -1,10 +1,9 @@
 
-# Meeting Notes Template - [Meeting Type] [Date]
-
+# Community Call Meeting Notes 3/21/2023
 ## Overview
 * **Date:** 3/21/2024
 * **Time:** 2:30 - 3:00
-* **Location:** [\[Location/Platform\]](https://app.sessions.us/session/56b791ec-0676-45ee-9caf-cfd72b3faa32)
+* **Location:** https://app.sessions.us/session/56b791ec-0676-45ee-9caf-cfd72b3faa32
 * **Facilitator:** Colin McNamara
 
 ## Attendees
