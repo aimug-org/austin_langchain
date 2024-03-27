@@ -24,6 +24,8 @@ Welcome to **Austin LangChain**, the convergence point for forward-thinkers in A
 
 **Austin LangChain Meetup: Code Generation, AI Image Generation, and More!** 4/3/2024 6:00 PM - 8:00 PM Central [here] (https://www.meetup.com/austin-langchain-ai-group/events/299824423/)
 
+#### Past Events
+
 **Virtual Meetup: Dive into LangGraph with the Austin LangChain Users Group** 3/7/2024 7:00 PM - 9:00 PM Central
 
 **Hacky Hour for Austin LangChain Users Group** 2/28/2024 6:00 PM - :00 PM Central
