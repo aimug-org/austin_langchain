@@ -1,4 +1,4 @@
-# Meeting Notes Template - Austin-LangChain-Community-Call 3-28-2024
+# Meeting Notes - Austin-LangChain-Community-Call 3-28-2024
 
 ## Overview
 * **Date:** 3-28-2024
