@@ -1,0 +1,13 @@
+{
+  "apiVersion": "v1",
+  "image": "ghcr.io/serge-chat/serge:latest",
+  "name": "Paperspace App - 2/29/2024",
+  "enabled": false,
+  "resources": {
+    "machineType": "A100-80G",
+    "replicas": 1,
+    "ports": [
+      8008
+    ]
+  }
+}
