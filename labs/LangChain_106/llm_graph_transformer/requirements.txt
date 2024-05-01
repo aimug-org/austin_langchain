@@ -1,0 +1,8 @@
+streamlit~=1.33.0
+langchain~=0.1.17
+langchain-core~=0.1.48
+langchain-community~=0.0.36
+langchain-experimental @ git+https://github.com/langchain-ai/langchain.git#egg=langchain_experimental&subdirectory=libs/experimental
+requests~=2.31.0
+pyvis~=0.3.2
+pandas~=2.2.2
