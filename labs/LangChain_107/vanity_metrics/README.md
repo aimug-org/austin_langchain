@@ -26,7 +26,7 @@ This Python-based tool is designed to fetch star counts for GitHub repositories 
    source .venv/bin/activate  # On Windows use `.venv\Scripts\activate`
    ```
 
-4. **Install the required packages:**
+3. **Install the required packages:**
 
    ```bash
    pip install requests python-dotenv
@@ -34,7 +34,7 @@ This Python-based tool is designed to fetch star counts for GitHub repositories 
 
 4. **Configure your GitHub token:**
 
-   - Create a `.env` file in your home directory or in the project directory.
+   - Create a `.env` file in your home directory or the project directory.
    - Add your GitHub token to the `.env` file:
 
      ```plaintext
@@ -88,4 +88,3 @@ This inherits the license from the upstream folder
 ---
 
 For more details on using and configuring GitHub API access, see the [GitHub API documentation](https://docs.github.com/en/rest).
-
