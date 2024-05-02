@@ -23,7 +23,13 @@ Welcome to **Austin LangChain**, the convergence point for forward-thinkers in A
 
 **Hacky Hour for Austin LangChain Users Group @ Luster Pearl East** 5/15/2024 6:00 PM - 8:00 PM Central [here](https://www.meetup.com/austin-langchain-ai-group/events/300593457/)
 
-#### 📅 Past Events
+### 📅 Ongoing Events
+
+**Office Hours** - Open Discussion on Voice / Video. Every Tuesday at 2-3 PM Central - [Discord - Meeting Room](https://discord.gg/fjQfpwcsZX)
+
+**Community Call** - Planning and review for our events, then open forum. Every Thursday from 2-3 PM Central - [meet.aimug.org](https://meet.aimug.org/session/1b5321b1-e360-4b4a-bc33-9307dc4782de)
+
+### 📅 Past Events
 
 **AI Data Scientist, Lessons Learned Panel, Blockchain Agents @ 1204 San Antonio & Online** 5/1/2024 6:00 PM - 9:00 PM Central [here](<https://www.meetup.com/austin-langchain-ai-group/events/300590454/>)
 
