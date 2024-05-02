@@ -1,5 +1,4 @@
 
-```markdown
 # GitHub Repository Analysis Tool
 
 This Python-based tool is designed to fetch star counts for GitHub repositories and compare these counts against the total number of repositories on GitHub to determine the relative popularity of a specific repository.
