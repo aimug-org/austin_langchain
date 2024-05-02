@@ -68,7 +68,7 @@ Welcome to **Austin LangChain**, the convergence point for forward-thinkers in A
 - **Discord**: Join our AI-powered discourse, voice sessions, and brainstorming marathons. [https://discord.gg/SDwD254V](https://discord.gg/fjQfpwcsZX)
 - **MeetUp**: Join our meetup for in-person and remote sessions. <https://www.meetup.com/austin-langchain-ai-group/>
 - **YouTube**: Review and share learning hosted by our members. <https://www.youtube.com/channel/UC03IXA4KU6hOQ_3YPTbS0ig>
-- **Twitter**: Get quick insights and news by following us. @AustinLangChain](<https://twitter.com/AustinLangChain>).
+- **Twitter**: Get quick insights and news by following us. [@AustinLangChain](<https://twitter.com/AustinLangChain>).
 
 ---
 
