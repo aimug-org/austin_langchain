@@ -1,8 +1,4 @@
-Sure, I'll create the meeting notes based on your template and the notes you provided.
-
----
-
-# Meeting Notes Template - Austin LangChain Users Group Community Call 06 Jun 2024
+# Meeting Notes  - Austin LangChain Users Group Community Call 06 Jun 2024
 
 ## Overview
 * **Date:** 06 Jun 2024
@@ -82,6 +78,3 @@ Sure, I'll create the meeting notes based on your template and the notes you pro
     * Updates on LangChain projects
     * Progress on NVIDIA contest submissions
 
----
-
-I hope these meeting notes meet your expectations! Let me know if there's anything else you'd like to add or adjust.
