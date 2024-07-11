@@ -10,40 +10,17 @@
 * Colin McNamara
 * Karim
 * Robert
-* Jackson
+* Jacksons
 * Vaskin
 * Scott
 * Ricky
 
 
 ## Agenda
-1. Meeting Introduction and Technical Issues
-   * Addressing lost screens and audio problems
-   * Allowing time for latecomers
-2. Feedback and Insights from Previous Event
-   * Positive feedback from Karim and Robert
-   * Discussion on Jackson's presentation and potential improvements
-3. Video Production and Content Organization
-   * Jackson's willingness to assist with video editing
-   * Colin's plans for AI mode organization on GitHub
-4. Audience Engagement and Technical Enhancements
-   * Feedback on curating questions from the online audience
-   * Discussion on technical improvements
-5. Future Session Planning and Collaboration
-   * Interest in hosting sessions focused on Lang Graphs
-   * Collaboration opportunities
-6. Fostering a Collaborative Learning Environment
-   * Emphasis on learning and experimentation over production readiness
-7. Logistics and Planning for Upcoming Events
-   * Review of attendance numbers and venue options
-   * Format and planning for the August 7th meeting
-8. Exploring New Technologies and Platforms
-   * Discussion on Streamline and NVIDIA platform credits
-9. Knowledge Sharing and Practical Applications
-   * Demonstrating transformation of chat algorithms
-   * Various presentation formats for sharing knowledge
-10. Follow-up Actions and Collaborations
-    * Office hours and file uploads to Discord
+1. 7-10-event Event Review
+2. Hacky Hour checkpoint
+3. Learning Event - Site planning
+4. Open Forum
 
 ## Discussion Points
 
