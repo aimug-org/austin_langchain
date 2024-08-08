@@ -14,6 +14,7 @@
 * Scott Askinosie
 * Jackson
 * Ricky Pirruccio
+* Rob Kessler
 
 ## Agenda
 1. 8/7 Event Review
