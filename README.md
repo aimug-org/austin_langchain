@@ -19,45 +19,15 @@ Welcome to **Austin LangChain**, the convergence point for forward-thinkers in A
 
 ---
 
-### 📅 Upcoming Events
-
-**Hacky Hour for Austin LangChain Users Group @ Luster Pearl East** 5/15/2024 6:00 PM - 8:00 PM Central [here](https://www.meetup.com/austin-langchain-ai-group/events/300593457/)
-
 ### 📅 Ongoing Events
+** Showcase and Mixer **
+Held on the first or second Wednseday of the month - 6-9 PM in downtown austin. Check meetup for the exact dates: [here](https://www.meetup.com/austin-langchain-ai-group/)
+
+**Hacky Hour for Austin LangChain Users Group @ a Local Bar** two Weeks after showcase 6:00 PM - 8:00 PM Central [here](https://www.meetup.com/austin-langchain-ai-group/events/300593457/)
 
 **Office Hours** - Open Discussion on Voice / Video. Every Tuesday at 2-3 PM Central - [Discord - Meeting Room](https://discord.gg/fjQfpwcsZX)
 
 **Community Call** - Planning and review for our events, then open forum. Every Thursday from 2-3 PM Central - [meet.aimug.org](https://meet.aimug.org/session/1b5321b1-e360-4b4a-bc33-9307dc4782de)
-
-### 📅 Past Events
-
-**AI Data Scientist, Lessons Learned Panel, Blockchain Agents @ 1204 San Antonio & Online** 5/1/2024 6:00 PM - 9:00 PM Central [here](<https://www.meetup.com/austin-langchain-ai-group/events/300590454/>)
-
-**Hacky Hour for Austin LangChain Users Group** 4/17/2024 6:00 PM - 8:00 PM Central [here](https://www.meetup.com/austin-langchain-ai-group/events/299873427/)
-
-**Austin LangChain Meetup: Code Generation, AI Image Generation, and More!** 4/3/2024 6:00 PM - 8:00 PM Central [here](<https://www.meetup.com/austin-langchain-ai-group/events/299824423/>)
-
-**Virtual Meetup: Dive into LangGraph with the Austin LangChain Users Group** 3/7/2024 7:00 PM - 9:00 PM Central
-
-**Hacky Hour for Austin LangChain Users Group** 2/28/2024 6:00 PM - 8:00 PM Central
-
-**Turbocharge your RAG with Google Drive Virtual - 2/7/2024 7:00 PM - 9:00 PM Central
-
-**Happy Hour Mixer** - TBD - Happy hour on the east side, maybe Full Circle on 12th and Chicon. They have skeeball and are near a couple of other fun places.
-
-**LangChain 103** - Using LangServe, Steamlit, and Docker for local LangChain Development - December 14, 6:00 PM Meeting at 1204 San Antonio 14 In-Person [Meetup](https://www.meetup.com/austin-langchain-ai-group/events/297837958/)
-
-**LangChain 102** - Meeting at 1204 San Antonio 14 at 6:00 [In-Person Meetup](https://www.meetup.com/austin-langchain-ai-group/events/297837958/)
-
-**Happy Hour Mixer** - Meeting up and hanging out at Central Machine Works on November 30th at 5:30 [East Side Mixer](https://www.meetup.com/austin-langchain-ai-group/events/297407244/)
-
-**LangChain 102**: LangServe & LangSmith - November 14th, 6:00 PM at 1204 San Antonio [In Person Meetup](https://www.meetup.com/austin-langchain-ai-group/events/297140581/)
-
-**Community Call** - Nov 2 @ 2 pm Central - [Google Meet](https://meet.google.com/wvi-iehn-wnj)
-
-**LangChain 101 - Remote**: November 1st [Google Meet](https://www.meetup.com/austin-langchain-ai-group/events/296856859/) **Presentation** [LC101](https://github.com/colinmcnamara/austin_langchain/blob/main/resources/presentations/LangChain%20101.pdf)
-
-**LangChain 101**: October 11th, 6:00 PM at 1204 San Antonio. Details and registration are [here](https://www.meetup.com/austin-langchain-ai-group/events/296499443/). **Presentation** [LC101](https://github.com/colinmcnamara/austin_langchain/blob/main/resources/presentations/LangChain%20101.pdf)
 
 ---
 
