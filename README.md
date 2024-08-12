@@ -20,8 +20,8 @@ Welcome to **Austin LangChain**, the convergence point for forward-thinkers in A
 ---
 
 ### 📅 Ongoing Events
-** Showcase and Mixer **
-Held on the first or second Wednseday of the month - 6-9 PM in downtown austin. Check meetup for the exact dates: [here](https://www.meetup.com/austin-langchain-ai-group/)
+**Showcases and Mixer**
+Held on the first or second Wednesday of the month - 6-9 PM in downtown Austin. Check meetup for the exact dates: [here](https://www.meetup.com/austin-langchain-ai-group/)
 
 **Hacky Hour for Austin LangChain Users Group @ a Local Bar** two Weeks after showcase 6:00 PM - 8:00 PM Central [here](https://www.meetup.com/austin-langchain-ai-group/events/300593457/)
 
