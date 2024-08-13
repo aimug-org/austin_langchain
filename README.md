@@ -1,7 +1,7 @@
 
 # Austin LangChain Users Group
 
-Welcome to **AI Middleware Users Group (AIMUG)**, where we're all about "learning in the open" right here in Austin, Texas. We're a community dedicated to the exploration and advancement of artificial intelligence, with a special focus on the open-source project LangChain. Whether you're a seasoned developer or just curious about AI, you're invited to join us as we learn, innovate, and grow together.
+Welcome to **Austin LangChain Users Group (AIMUG)**, where we're all about "learning in the open" right here in Austin, Texas. We're a community dedicated to the exploration and advancement of artificial intelligence, with a special focus on the open-source project LangChain. Whether you're a seasoned developer or just curious about AI, you're invited to join us as we learn, innovate, and grow together.
 
 ---
 
