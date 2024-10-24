@@ -1,5 +1,5 @@
 
-# Meeting Notes Template - [Meeting Type] [Date]
+# Meeting Notes - [Meeting Type] [Date]
 
 ## Overview
 * **Date:** [Date]
