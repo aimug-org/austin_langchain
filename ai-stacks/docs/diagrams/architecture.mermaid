@@ -1,0 +1,24 @@
+graph TD
+    User[User/Client] -->|Access| CF[Cloudflared]
+
+    subgraph AI Services
+        CF -->|Route| OW[Open WebUI]
+        CF -->|Route| SD[Stable Diffusion WebUI]
+        CF -->|Route| SX[SearxNG]
+
+        OW -->|Interact| OL[Ollama LLM]
+
+        subgraph Data Processing
+            PP[Pandas Agent Pipeline]
+            PP -->|Process| Data[(Data)]
+        end
+    end
+
+    style User fill:#f9f,stroke:#333,stroke-width:2px
+    style CF fill:#9cf,stroke:#333,stroke-width:2px
+    style OW fill:#9f9,stroke:#333,stroke-width:2px
+    style OL fill:#9f9,stroke:#333,stroke-width:2px
+    style SD fill:#f99,stroke:#333,stroke-width:2px
+    style SX fill:#ff9,stroke:#333,stroke-width:2px
+    style PP fill:#9ff,stroke:#333,stroke-width:2px
+    style Data fill:#f9f,stroke:#333,stroke-width:2px
