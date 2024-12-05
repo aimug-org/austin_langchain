@@ -4,37 +4,58 @@
 
 This guide is designed to streamline your setup process, ensuring you're ready to dive into our in-person labs. Follow these instructions to familiarize yourself with the key resources we frequently use. This preparation will enhance your ability to actively participate and engage with the session's content.
 
-## Setting Up Accounts
+## Inference Layer Setup
 
-### Open AI
-OpenAI, behind the groundbreaking ChatGPT, has been instrumental in elevating AI to the forefront of technology. In our LangChain projects, we frequently harness their models, which in some ways are foundational to much of LangChain's ecosystem. However, this reliance is evolving as our community expands this integration with open-source models, broadening our toolkit and possibilities. (We often showcase working with open source models in our labs)
+Inference allows AI models to interpret and respond to various data types, or *modalities*, to name a few: **Text-to-Text (NLP)**, **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Speech-to-Speech (STS)**. Advanced *multimodal* models can combine these to create rich, context-aware responses across formats. Accessing these capabilities can be done through paid APIs or by running open-source models on local GPU and CPU hardware.
 
-If you do not have an OpenAI account yet, create one at [OpenAI Account Sign Up](https://platform.openai.com/signup). This account is necessary for generating your API key.
+### Inference Cloud Provider Way
 
-Then navigate to "API Keys" and generate a new key. Store it somewhere safe for now.
+Here are some notable Inference API providers:
 
-(Note: Do not share keys - use with caution)
+| Provider              | Link                                      |
+|-----------------------|-------------------------------------------|
+| Anthropic (Claude 3)  | [Anthropic](https://www.anthropic.com/api)|
+| xAI (Grok)            | [xAI](https://x.com/)                     |
+| OpenAI (GPT-4)        | [OpenAI](https://platform.openai.com/)    |
+| Google (Gemini)       | [Google](https://aistudio.google.com/)    |
 
-![Open AI API Key](./quick_start_assets/open_ai_api_key.png)
+### Private Open Source Way (Ollama)
+
+Ollama is our top choice for local model deployment, offering flexibility across macOS, Windows, and Linux. With strong community support and Docker compatibility, Ollama simplifies deploying, managing, and customizing models. It includes a vast model library for tasks like NLP, code generation, and data analysis, so you can adapt AI to your exact needs. The only limit is your hardware and model size: larger models demand more powerful setups, making hardware specs and model parameters key considerations for performance. For guidance, the [Ollama Github Repo](https://github.com/ollama/ollama) provides setup instructions, and there are many tutorials on YouTube and the web to help you get familiar with it.
+
+## Open Web UI
+
+**Open Web UI** is a free, open-source interface that integrates smoothly with LangChain agents with pipeline support. Built as a Progressive Web App (PWA) with authentication support, it’s accessible from any device. Designed for flexibility, it lets you connect to inference API endpoints from any source, whether they run on your local GPU hardware or on cloud-based providers, giving you powerful, on-demand access to advanced AI tools wherever you need them.
+
+### Tailored Pipelines & LangChain Integration
+
+With Open Web UI, you can set up tailored pipelines to seamlessly integrate your LangChain agents. Whether it’s retrieving web data, connecting to your notes, or querying a database with natural language, you can build workflows that meet your specific needs. These pipelines make it simple to combine different AI functions, and fully control how they interact.
+
+### Easy Deployment with Docker Support
+
+Open Web UI offers Docker support, allowing you to deploy it quickly on your own servers or cloud platforms. This flexibility means you can set up Open Web UI for personal use, or make it accessible to others, such as family members or team members if you’re running a business.
+
+### Why Use Open Web UI?
+
+Think of Open WebUI as your AI ‘command center.’ With flexible deployment options and support for hardware scaling, including GPU acceleration through Docker and Kubernetes, it allows you to centralize AI workflows, connect inference endpoints, and tailor configurations for personal or collaborative use, all from a single, user-friendly interface that you can acess from anywhere.
+
+For more details, check out the [Open Web UI documentation](https://docs.openwebui.com/).
+
+![Open Web UI](https://docs.openwebui.com/assets/images/demo-d3952c8561c4808c1d447fc061c71174.gif)
+
 
 ### LangSmith
 
-LangSmith, developed by [LangChain](https://www.langchain.com/langsmith), is a versatile DevOps platform providing visibility into the sequence of calls in your LangChain applications as they interact with our AI models, a feature pivotal for debugging.
+[LangSmith](https://www.langchain.com/langsmith), developed by LangChain, is a DevOps platform that provides visibility into the sequence of calls in your LangChain applications as they interact with AI models. This visibility is essential for debugging and testing.
 
-At Austin LangChain, we frequently leverage LangSmith during our lab sessions. Its ability to offer full visibility and traceability makes it an indispensable tool for our development process, allowing us to swiftly identify and showcase what is happening under the hood during our labs.
+LangSmith is especially useful for tracking and optimizing your LangChain applications before deployment. It’s a paid service, so you’ll need an account and an API key to use its features.
 
-Learn more about how LangSmith at [LangChain's LangSmith Page](https://www.langchain.com/langsmith).
+Here's a quick demo of LangSmith in action:
 
-If you do not have a LangSmith account yet, create one at [LangSmith Account Sing Up](https://smith.langchain.com/)
-
-Once logged in, go to "Settings" and click on "Create API Key". Store it somewhere safe for now.
-
-(Note: Do not share keys - use with caution)
-
-![LangSmith API Key](./quick_start_assets/langsmith_key.png)
+![LangSmith Demo](https://miro.medium.com/v2/resize:fit:2000/1*4kgFH6MqBldGgbxWWYP51A.gif)
 
 
-### Google Colab
+## Google Colab
 Google Colab is a free cloud-based platform that lets you write and execute Python code through your browser. At Austin LangChain, we use Colab to write, share, and explain code in real-time during our labs.
 
 This approach allows everyone to follow along with the concepts we're learning about LangChain, without needing any special setup on their personal computers. It's an ideal tool for collaborative learning and experimentation, ensuring that everyone, regardless of their hardware, can participate fully in our sessions.
@@ -70,16 +91,45 @@ During our labs, we've already got these steps covered in our notebooks! You'll 
 
 ### Your Own Machine
 
-Alternatively, you can set up your secrets in your own machine in accordance to your operating system.
+Alternatively, If you’re pulling code from a repo and want to run it locally, you can set up your secrets in your own machine in accordance to your operating system.
 
-To do so, follow the instructions provided in the [OpenAI Platform Documentation](https://platform.openai.com/docs/quickstart/step-2-set-up-your-api-key).
+There's plenty of detailed tutorials out there for this. Here's some examples depending on your os:
 
-We strongly encourage you to set up environment variables globally as it's much easier to keep track of them across all your projects.
+#### Mac OS / Linux
 
-![Setup API Keys](./quick_start_assets/setup_api_keys.png)
+Add environment variables directly in the terminal:
+```bash
+export API_KEY="your_value"
+export DB_PASSWORD="your_value"
+```
 
-## Setting up Docker
+#### Windows
 
-Docker is widely celebrated for its ability to simplify the workflows of developers, and it's a tool we frequently utilize at Austin LangChain. Take a look at our [Intro to Docker](../../labs/LangChain_103/103-1-docker_introduction.md) tutorial to see why we love using it in our LangChain projects.
+Set environment variables in Command Prompt:
+```cmd
+set API_KEY=your_value
+set DB_PASSWORD=your_value
+```
 
-For now, just make sure to have Docker Desktop installed in your operating system by visiting [Docker Desktop](https://www.docker.com/products/docker-desktop/).
+## Docker
+
+Docker is widely celebrated for its ability to simplify and accelerate development by packaging applications and their dependencies into portable containers. This containerization ensures that the same setup runs seamlessly across your local, testing, and production environments, eliminating the headaches of inconsistent configurations. It’s a tool we frequently rely on at Austin LangChain to make deployments smooth and consistent.
+
+In fact, many AI applications come ready with Docker images and Dockerfiles, making it easy to spin up complex environments with just a few commands.  If you're new to it, take a look at our [Intro to Docker](../../labs/LangChain_103/103-1-docker_introduction.md) tutorial or checkout Docker's very detailed documentation [here](https://docs.docker.com/get-started/). It's a technology that's well worth learning!
+
+
+### Windows and Mac OS
+
+* Just install [Docker Desktop](https://www.docker.com/products/docker-desktop/) for easy setup.
+
+Docker Desktop includes everything you need to start working with Docker:
+*	**Docker Engine and CLI**: The core services for building, running, and managing containers.
+*	**Docker Compose**: A tool for defining and running multi-container applications, useful for orchestrating complex setups with multiple services.
+* **User Interface**: An intuitive GUI to manage containers, images, and volumes directly, making it easier for beginners to get comfortable with Docker.
+
+
+### Linux
+
+For Linux, the Docker CLI through Docker Engine is typically the best option—it’s lightweight and efficient for native container management. Docker Desktop is available for Linux, but it runs in a VM, which might not be necessary for most users.
+
+* See [Docker Engine installation instructions](https://docs.docker.com/engine/install/) for your specific Linux distribution.

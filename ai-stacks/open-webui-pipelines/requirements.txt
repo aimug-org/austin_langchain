@@ -1,0 +1,14 @@
+langchain
+langchain-experimental
+langchain-community
+langchain_ollama
+pandas
+openpyxl
+pydantic>=2.0.0
+fastapi
+uvicorn
+python-dotenv
+requests
+aiohttp
+numpy
+pyyaml
