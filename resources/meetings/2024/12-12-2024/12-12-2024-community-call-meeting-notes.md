@@ -66,3 +66,4 @@
     - Event debrief  
     - Gemini 2 deep dive  
     - Scaling AI tools discussion  
+    
