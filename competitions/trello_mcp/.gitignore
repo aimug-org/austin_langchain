@@ -1,0 +1,44 @@
+# Environment variables and virtual environments
+.env
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+build/
+dist/
+*.egg-info/
+*.so
+*.dylib
+*.dll
+
+# Package management
+pip-log.txt
+pip-delete-this-directory.txt
+*.lock
+.python-version
+
+# Testing and coverage
+.coverage
+coverage.xml
+*.cover
+.pytest_cache/
+.tox/
+.nox/
+htmlcov/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.project
+.pydevproject
+
+# System
+.DS_Store
+Thumbs.db
