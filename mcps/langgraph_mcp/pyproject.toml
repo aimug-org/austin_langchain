@@ -1,0 +1,66 @@
+[project]
+name = "langgraph-mcp"
+version = "0.1.0"
+description = "MCP server for LangGraph integration"
+requires-python = ">=3.11"
+authors = [
+    {name = "Austin LangChain", email = "info@austinlangchain.com"}
+]
+dependencies = [
+    "mcp[cli]",
+    "pydantic",
+    "pydantic-settings",
+    "langgraph-sdk",
+    "anyio",
+    "typing-extensions",
+    "click",
+    "uvicorn",
+    "starlette"
+]
+
+[project.scripts]
+langgraph-mcp = "langgraph_mcp.main:main"
+
+[project.optional-dependencies]
+dev = [
+    "ruff",
+    "mypy",
+    "black",
+    "pytest"
+]
+
+[build-system]
+requires = ["setuptools>=73.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["langgraph_mcp"]
+package-dir = {"langgraph_mcp" = "src"}
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "B",  # flake8-bugbear
+]
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+check_untyped_defs = true
+
+[[tool.mypy.overrides]]
+module = ["react_agent.*"]
+ignore_missing_imports = true
