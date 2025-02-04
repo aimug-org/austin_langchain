@@ -5,17 +5,11 @@ All logging intended for the client is performed via the Context’s logging met
 (which send messages over the MCP protocol via stdio) rather than using module-level logging.
 """
 
-from typing import Optional
+from typing import Optional, Annotated
+from pydantic import Field
 from mcp.server.fastmcp.server import FastMCP, Context
 from langgraph_sdk import get_client
-from langgraph_sdk.schema import (
-    Assistant,
-    GraphSchema,
-    StreamPart,
-    StreamMode,
-    Json,
-    Config,
-)
+from langgraph_sdk.schema import Assistant, GraphSchema, StreamPart, StreamMode, Json, Config
 from settings import Settings
 
 # Initialize settings (do not log here to avoid writing to stdout)
@@ -51,10 +45,10 @@ server = FastMCP(name="langgraph_mcp")
 @server.tool(description="Get list of available assistants")
 async def get_assistants_list(
     ctx: Context,
-    metadata: Json = None,
-    graph_id: Optional[str] = None,
-    limit: int = 10,
-    offset: int = 0,
+    metadata: Annotated[Json, Field(description="Optional metadata for filtering assistants")] = None,
+    graph_id: Annotated[Optional[str], Field(description="Optional graph ID for filtering assistants")] = None,
+    limit: Annotated[int, Field(description="Maximum number of assistants to return")] = 10,
+    offset: Annotated[int, Field(description="Offset for pagination")] = 0,
 ) -> list[Assistant]:
     """Search for assistants with optional filtering."""
     ctx.debug(f"Searching assistants with limit={limit}, offset={offset}")
@@ -72,8 +66,11 @@ async def get_assistants_list(
         ctx.error(f"Error searching assistants: {e}")
         raise
 
-@server.tool(description="Get the schema for an assistant")
-async def get_assistant_schema(ctx: Context, assistant_id: str) -> GraphSchema:
+@server.tool(description="Get the schema for an assistant. Useful for knowing how to structure the input of running an assistant using run_assistant")
+async def get_assistant_schema(
+    ctx: Context,
+    assistant_id: Annotated[str, Field(description="The ID of the assistant to retrieve the schema for")],
+) -> GraphSchema:
     """Get the schema for an assistant by ID."""
     ctx.debug(f"Getting schema for assistant {assistant_id}")
     try:
@@ -88,12 +85,12 @@ async def get_assistant_schema(ctx: Context, assistant_id: str) -> GraphSchema:
 @server.tool(description="Run an assistant with streaming output")
 async def run_assistant(
     ctx: Context,
-    thread_id: Optional[str],
-    assistant_id: str,
-    input: dict,
-    stream_mode: list[StreamMode] = ["values"],
-    metadata: Json = None,
-    config: Optional[Config] = None,
+    assistant_id: Annotated[str, Field(description="The ID of the assistant to run")],
+    input: Annotated[dict, Field(description="Input data for the assistant")],
+    thread_id: Annotated[Optional[str], Field(description="Optional thread ID for the assistant run")] = None,
+    stream_mode: Annotated[list[StreamMode], Field(description="Modes for streaming output")] = ["values"],
+    metadata: Annotated[Json, Field(description="Optional metadata for the assistant run")] = None,
+    config: Annotated[Optional[Config], Field(description="Optional configuration for the assistant run")] = None,
 ) -> dict:
     """Run an assistant and stream the results."""
     ctx.debug(f"Starting assistant run for {assistant_id}")
@@ -124,6 +121,49 @@ async def run_assistant(
     except Exception as e:
         ctx.error(f"Error during assistant run: {e}")
         raise
+
+
+@server.tool(description="Search for threads using specified filters")
+async def search_threads(
+    ctx: Context,
+    metadata: Optional[Json] = Field(default=None, description="Thread metadata to filter on"),
+    values: Optional[Json] = Field(default=None, description="State values to filter on"),
+    status: Optional[str] = Field(default=None, description="Thread status filter; allowed: 'idle', 'busy', 'interrupted', 'error'"),
+    limit: int = Field(default=10, description="Limit on number of threads to return"),
+    offset: int = Field(default=0, description="Offset for pagination")
+) -> list:
+    """
+    Searches for threads based on metadata, state values, and status.
+    """
+    client = get_langgraph_client(ctx)
+    threads = await client.threads.search(
+        metadata=metadata,
+        values=values,
+        status=status,
+        limit=limit,
+        offset=offset
+    )
+    return threads
+
+@server.tool(description="Retrieve the state of a thread")
+async def get_state(
+    ctx: Context,
+    thread_id: str = Field(..., description="The ID of the thread to get the state for"),
+    checkpoint: Optional[dict] = Field(default=None, description="Checkpoint information (if applicable)"),
+    checkpoint_id: Optional[str] = Field(default=None, description="Specific checkpoint identifier"),
+    subgraphs: bool = Field(default=False, description="Include subgraphs states")
+) -> dict:
+    """
+    Retrieves the current state of the specified thread.
+    """
+    client = get_langgraph_client(ctx)
+    state = await client.threads.get_state(
+        thread_id=thread_id,
+        checkpoint=checkpoint,
+        checkpoint_id=checkpoint_id,
+        subgraphs=subgraphs
+    )
+    return state
 
 if __name__ == "__main__":
     # Run the server using stdio transport.
