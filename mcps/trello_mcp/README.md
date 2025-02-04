@@ -90,7 +90,7 @@ TRELLO_API_BASE_URL=https://api.trello.com/1  # Default API endpoint
 
 ## 🔧 MCP Settings Configuration
 
-Add the TrelloMCP server configuration to your MCP settings file. The configuration is the same for both apps, just place it in the appropriate location:
+Add the trello_mcp server configuration to your MCP settings file. The configuration is the same for both apps, just place it in the appropriate location:
 
 - 🤖 Cline VSCode Extension: `~/Library/Application Support/Code/User/globalStorage/saoudrizwan.claude-dev/settings/cline_mcp_settings.json`
 - 💻 Claude Desktop App: `~/Library/Application Support/Claude/claude_desktop_config.json`
@@ -98,7 +98,7 @@ Add the TrelloMCP server configuration to your MCP settings file. The configurat
 ```json
 {
   "mcpServers": {
-    "TrelloMCP": {
+    "trello_mcp": {
       "command": "uv", // Assumes uv is in PATH
       "args": [
         "--directory",
