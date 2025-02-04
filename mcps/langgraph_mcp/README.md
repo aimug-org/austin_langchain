@@ -8,8 +8,7 @@ For detailed information about developing MCP servers:
 - [MCP Server Development Quickstart Guide](https://modelcontextprotocol.io/quickstart/server)
 - [LangGraph Python SDK](https://langchain-ai.github.io/langgraph/concepts/sdk/) - Essential resource for understanding how to interact with LangGraph clients for your assistants
 - [LangGraph Python SDK Reference](https://langchain-ai.github.io/langgraph/cloud/reference/sdk/python_sdk_ref/) - Comprehensive API documentation for client interactions
-- [LangGraph Academy Intro to LangGraph](https://academy.langchain.com/courses/intro-to-langgraph) - The Academy's Deployment module is particularly useful for understanding how the LangGraph server works under the hood and how to interact with different client options. Includes amazing video lessons and PDFs of the lessons with detailed explanations.
-
+- [LangGraph Academy Intro to LangGraph](https://academy.langchain.com/courses/intro-to-langgraph) - The Academy's Deployment module is particularly useful for understanding how the LangGraph server works under the hood and how to interact with different client options.
 
 ## 📋 Prerequisites
 
@@ -41,18 +40,15 @@ source .venv/bin/activate
 # Step 3: Install the package
 uv pip install .
 ```
-
 This will:
 - Create a Python virtual environment
 - Activate it for your terminal session
 - Install dependencies from pyproject.toml
-
 ## 📁 Project Structure
 
 ```
 src/
 ├── settings.py    # Environment and configuration management
-├── schemas.py     # Pydantic models for request validation
 └── server.py     # MCP server implementation with tools
 ```
 
@@ -70,7 +66,7 @@ Add the LangGraphMCP server configuration to your MCP settings file. The configu
 ```json
 {
   "mcpServers": {
-    "LangGraphMCP": {
+    "langgraph_mcp": {
       "command": "uv",
       "args": [
         "--directory",
@@ -89,62 +85,43 @@ The server provides the following MCP tools:
 
 ### 🔍 Assistant Management
 
-- `get_assistants_list`: Get a list of available assistants with optional filtering.
-
-```python
-from schemas import AssistantSearchParams
-
-params = AssistantSearchParams(
-    metadata={"key": "value"},  # Optional metadata filter
-    graph_id="my_graph",        # Optional graph ID filter
-    limit=10,                   # Maximum results to return
-    offset=0                    # Number of results to skip
-)
-result = await get_assistants_list(params)
-```
+- `get_assistants_list`: Get list of available assistants. Supports filtering by:
+  - Metadata for filtering assistants
+  - Graph ID for filtering assistants
+  - Maximum number of assistants to return (default: 10)
+  - Offset for pagination (default: 0)
 
 ### 📊 Schema Operations
 
-- `get_assistant_schema`: Get the schema for a specific assistant.
-
-```python
-from schemas import AssistantSchemaParams
-
-params = AssistantSchemaParams(
-    assistant_id="asst_123"     # ID of the assistant
-)
-result = await get_assistant_schema(params)
-```
+- `get_assistant_schema`: Get the schema for an assistant. Useful for knowing how to structure the input of running an assistant using run_assistant.
+  - Requires assistant ID to retrieve the schema for
 
 ### 🤖 Assistant Execution
 
-- `run_assistant`: Run an assistant with input and get the results. First get the assistant's schema to determine the required input structure:
+- `run_assistant`: Run an assistant with streaming output. Accepts:
+  - Assistant ID to run
+  - Input data for the assistant
+  - Optional thread ID for the assistant run
+  - Modes for streaming output (default: ["values"])
+  - Optional metadata for the assistant run
+  - Optional configuration for the assistant run
 
-```python
-from schemas import AssistantSchemaParams, RunAssistantParams
+### 🔍 Thread Management
 
-# First get the assistant's schema
-schema_params = AssistantSchemaParams(
-    assistant_id="asst_123"     # ID of the assistant
-)
-schema = await get_assistant_schema(schema_params)
+- `search_threads`: Search for threads using specified filters:
+  - Thread metadata to filter on
+  - State values to filter on
+  - Thread status filter (allowed: 'idle', 'busy', 'interrupted', 'error')
+  - Limit on number of threads to return (default: 10)
+  - Offset for pagination (default: 0)
 
-# The schema.input_schema shows what input structure is required
-# For example, if it expects a messages array:
-params = RunAssistantParams(
-    assistant_id="asst_123",            # ID of the assistant
-    input={
-        "messages": [
-            {"type": "human", "content": "Hello!"}
-        ]
-    },
-    stream_mode=["values", "debug"],    # Stream modes to use
-    config={"model_name": "openai"}     # Optional configuration
-)
-result = await run_assistant(params)
-```
+### 📊 Thread State
 
-The input structure must match what's defined in the assistant's input_schema. Always check the schema first to ensure you're providing the correct input format.
+- `get_state`: Retrieve the state of a thread:
+  - Thread ID to get the state for
+  - Optional checkpoint information
+  - Optional specific checkpoint identifier
+  - Option to include subgraphs states (default: false)
 
 ## 💻 Local Development
 

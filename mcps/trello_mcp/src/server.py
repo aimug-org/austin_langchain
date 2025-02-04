@@ -12,7 +12,7 @@ from trello_errors import TrelloError, handle_trello_error
 from trello_schemas import Board, BoardList, CardList, Card
 
 # Initialize the MCP server
-mcp = FastMCP("TrelloMCP")
+mcp = FastMCP("trello_mcp")
 
 # Initialize the Trello API client with settings
 trello_client = TrelloClient(

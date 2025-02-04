@@ -117,6 +117,31 @@ async def my_tool(param: str, ctx: Context) -> str:
     return f"Processed {param}"
 ```
 
+### Parameter Descriptions in Tools
+- Use `Annotated` with Pydantic's `Field` to define parameter descriptions in the function signature:
+  ```python
+  from typing import Annotated
+  from pydantic import Field
+
+  @server.tool(description="Example tool")
+  async def example_tool(
+      param1: Annotated[int, Field(description="An integer parameter")],
+      param2: Annotated[str, Field(description="A string parameter")],
+  ) -> None:
+      pass
+  ```
+
+- Ensure that all non-default arguments come before any default arguments in the function signature:
+  ```python
+  async def example_tool(
+      param1: Annotated[int, Field(description="Required parameter")],
+      param2: Annotated[Optional[str], Field(description="Optional parameter")] = None,
+  ) -> None:
+      pass
+  ```
+
+These practices ensure that FastMCP's `func_metadata` extracts and exposes parameter descriptions correctly.
+
 2. **Resource Definition**
 ```python
 @server.resource("resource://data/{id}")
