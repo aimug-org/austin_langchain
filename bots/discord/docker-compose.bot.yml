@@ -1,0 +1,31 @@
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: aimug_bot_db
+    environment:
+      POSTGRES_USER: discord_bot
+      POSTGRES_PASSWORD: dev_password
+      POSTGRES_DB: austin_langchain_bot
+    ports:
+      - "5433:5432"  # Different port to avoid conflict
+    volumes:
+      - aimug_bot_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U discord_bot"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: aimug_bot_redis
+    ports:
+      - "6380:6379"  # Different port to avoid conflict
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  aimug_bot_postgres_data:

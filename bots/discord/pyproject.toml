@@ -1,0 +1,96 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "austin-langchain-discord-bot"
+version = "0.1.0"
+description = "AI-powered Discord bot for Austin LangChain community newsletter generation"
+authors = ["Austin LangChain Team <team@austinlangchain.org>"]
+readme = "README.md"
+packages = [{include = "discord_bot", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+discord-py = "^2.3.2"
+langchain = ">=0.3.0"
+langgraph = ">=0.2.0"
+langsmith = ">=0.2.0"
+sqlalchemy = "^2.0.25"
+alembic = "^1.13.1"
+asyncpg = "^0.29.0"
+python-dotenv = "^1.0.0"
+pydantic = "^2.5.0"
+pydantic-settings = "^2.1.0"
+httpx = "^0.26.0"
+aiohttp = "^3.9.1"
+apscheduler = "^3.10.4"
+loguru = "^0.7.2"
+rich = "^13.7.0"
+typer = "^0.9.0"
+jinja2 = "^3.1.2"
+greenlet = "^3.2.3"
+pytz = "^2025.2"
+langchain-openai = ">=0.3.0"
+langchain-core = ">=0.3.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.3"
+pytest-asyncio = "^0.23.2"
+pytest-cov = "^4.1.0"
+black = "^23.12.1"
+isort = "^5.13.2"
+flake8 = "^7.0.0"
+mypy = "^1.8.0"
+pre-commit = "^3.6.0"
+pytest-mock = "^3.12.0"
+factory-boy = "^3.3.0"
+freezegun = "^1.2.2"
+
+[tool.poetry.scripts]
+discord-bot = "discord_bot.cli:app"
+
+[tool.black]
+line-length = 88
+target-version = ['py311']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 88
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "--cov=src --cov-report=html --cov-report=term-missing"
+asyncio_mode = "auto"
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+]

@@ -101,9 +101,6 @@ ipython_config.py
 #   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
 #poetry.lock
 
-# uv package manager
-uv.lock
-
 # pdm
 #   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
 #pdm.lock
@@ -124,6 +121,7 @@ celerybeat.pid
 
 # Environments
 .env
+.env.bak
 .venv
 env/
 venv/
@@ -157,13 +155,61 @@ cython_debug/
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
-#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
-#  and can be added to the global gitignore or merged into this file.  For a more nuclear
-#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
-#.idea/
+#  be added to the global gitignore or merged into this project gitignore.  For a PyCharm
+#  project, it is generally recommended to include all the files under version control.
+#  However, in cases where PyCharm is used across platforms with different configurations,
+#  you might want to exclude the following files:
+#  .idea/
 
 # Project specific
-**/valves.json
+logs/
+*.db
+*.sqlite
+*.sqlite3
 
-# Discord bot
-bots/discord/output
+# Docker
+docker-compose.override.yml
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+
+# Local configuration overrides
+local_settings.py
+.env.local
+.env.development
+.env.production
+
+# Generated files
+alembic.ini.bak
+migrations_backup/
+
+# LangSmith traces (if stored locally)
+langsmith_traces/
+
+# Generated newsletters
+output/*.md
+!output/README.md
+*.md
+!README.md
+!docs/NEWSLETTER_GENERATION.md
+!CLOUDFLARE_DEPLOYMENT_ANALYSIS.md
+!docs/MAKEFILE_USAGE.md
+!tests/README.md
+!scripts/README.md
