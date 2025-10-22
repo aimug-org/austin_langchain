@@ -11,6 +11,7 @@ class DiscussionData(BaseModel):
     content: str
     author: str
     channel: str
+    channel_id: str
     engagement_score: float
     reply_count: int
     reaction_count: int
@@ -83,6 +84,7 @@ class NewsletterState(TypedDict):
 
     # Final output
     newsletter_draft: Optional[NewsletterDraft]
+    formatted_content: Dict[str, str]  # html, markdown, text
     quality_metrics: Dict[str, float]
 
     # Workflow control

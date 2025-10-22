@@ -103,9 +103,9 @@ Guidelines:
         # Generate Discord link
         from discord_bot.utils.discord_links import generate_discord_message_link
         guild_id = settings.discord_guild_id
-        channel = top_news.get("channel", "news-and-polls")
+        channel_id = top_news.get("channel_id", "")
         message_id = top_news.get("message_id", "")
-        discord_link = generate_discord_message_link(guild_id, channel, message_id) if guild_id else None
+        discord_link = generate_discord_message_link(guild_id, channel_id, message_id) if guild_id and channel_id else None
 
         # Use LLM to create a brief summary if available
         summary = await self._summarize_news_article(top_news)
@@ -213,9 +213,9 @@ Focus on the key point and why it matters to the AI/ML community."""
         # Generate Discord link
         from discord_bot.utils.discord_links import generate_discord_message_link
         guild_id = settings.discord_guild_id
-        channel = top_meme.get("channel", "dank-memes")
+        channel_id = top_meme.get("channel_id", "")
         message_id = top_meme.get("message_id", "")
-        discord_link = generate_discord_message_link(guild_id, channel, message_id) if guild_id else None
+        discord_link = generate_discord_message_link(guild_id, channel_id, message_id) if guild_id and channel_id else None
 
         return {
             "image_url": image_url,
@@ -249,9 +249,9 @@ Focus on the key point and why it matters to the AI/ML community."""
                 # Generate Discord link
                 from discord_bot.utils.discord_links import generate_discord_message_link
                 guild_id = settings.discord_guild_id
-                channel = discussion.get("channel", "unknown")
+                channel_id = discussion.get("channel_id", "")
                 message_id = discussion.get("message_id", "")
-                discord_link = generate_discord_message_link(guild_id, channel, message_id) if guild_id else None
+                discord_link = generate_discord_message_link(guild_id, channel_id, message_id) if guild_id and channel_id else None
 
                 tshirt_ideas.append({
                     "image_url": attachment_urls[0],

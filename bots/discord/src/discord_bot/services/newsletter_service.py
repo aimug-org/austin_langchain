@@ -99,6 +99,7 @@ class NewsletterService:
                     content=d[0].content,
                     author=d[0].author.username if d[0].author else "Unknown",
                     channel=d[0].channel.name if d[0].channel else "Unknown",
+                    channel_id=d[0].channel.channel_id if d[0].channel else "",
                     engagement_score=d[1].engagement_score,
                     reply_count=d[1].reply_count,
                     reaction_count=d[1].reaction_count,

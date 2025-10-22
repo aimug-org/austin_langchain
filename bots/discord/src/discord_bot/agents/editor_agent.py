@@ -145,28 +145,47 @@ Quality criteria:
         """Edit content using LLM."""
         prompt = f"""
         Edit this newsletter section for the Austin LangChain community:
-        
+
         Section Type: {section.get('section_type', 'general')}
         Title: {section.get('title', 'Untitled')}
-        
+
         Content:
         {section.get('content', '')}
-        
+
         Edit for:
         1. Clarity and conciseness
         2. Technical accuracy
         3. Professional yet approachable tone
         4. Grammar and style
         5. Community-friendly language
-        
+
         Preserve the core message and technical details.
         Keep the collaborative spirit of the community.
+
+        CRITICAL: Return ONLY the edited content. Do NOT include any preamble like "Sure!", "Here's the edited version", or explanatory text. Start directly with the content.
         """
-        
+
         messages = self._create_messages(prompt)
         response = await self._call_llm(messages)
-        
-        return response.strip()
+
+        # Remove common LLM preambles
+        cleaned = response.strip()
+        preamble_patterns = [
+            r'^Sure!?\s*Here\'?s?\s+the\s+edited\s+version[^:]*:?\s*',
+            r'^Here\'?s?\s+the\s+edited\s+[^:]*:?\s*',
+            r'^I\'ve\s+edited\s+[^:]*:?\s*',
+            r'^---+\s*',
+            r'^\*\*Section Type:[^*]+\*\*\s*',
+            r'^\*\*Title:[^*]+\*\*\s*',
+        ]
+
+        for pattern in preamble_patterns:
+            cleaned = re.sub(pattern, '', cleaned, flags=re.IGNORECASE | re.MULTILINE)
+
+        # Remove "This revised section..." footer text
+        cleaned = re.sub(r'\n+---+\s*\n+This\s+revised\s+section.*$', '', cleaned, flags=re.IGNORECASE | re.DOTALL)
+
+        return cleaned.strip()
     
     def _calculate_edit_distance(self, original: str, edited: str) -> float:
         """Calculate the percentage of content changed."""

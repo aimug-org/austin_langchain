@@ -232,7 +232,8 @@ Return ONLY the formatted summary, nothing else.
         # Generate Discord link
         from discord_bot.utils.discord_links import generate_discord_message_link
         guild_id = settings.discord_guild_id
-        discord_link = generate_discord_message_link(guild_id, channel, message_id) if guild_id else None
+        channel_id = discussion.get("channel_id", "")
+        discord_link = generate_discord_message_link(guild_id, channel_id, message_id) if guild_id and channel_id else None
 
         return {
             "summary": response.strip(),
@@ -266,7 +267,8 @@ Return ONLY the formatted summary, nothing else.
 
         from discord_bot.utils.discord_links import generate_discord_message_link
         guild_id = settings.discord_guild_id
-        discord_link = generate_discord_message_link(guild_id, channel, message_id) if guild_id else None
+        channel_id = discussion.get("channel_id", "")
+        discord_link = generate_discord_message_link(guild_id, channel_id, message_id) if guild_id and channel_id else None
 
         return {
             "summary": summary,

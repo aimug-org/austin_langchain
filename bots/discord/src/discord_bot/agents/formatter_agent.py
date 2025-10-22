@@ -4,6 +4,8 @@ from typing import Dict, Any, List, Optional
 from datetime import datetime
 import json
 import random
+import markdown
+import re
 
 from discord_bot.agents.base_agent import BaseNewsletterAgent
 from discord_bot.agents.state import NewsletterState, AgentResponse, NewsletterDraft, NewsletterSection
@@ -22,9 +24,9 @@ COMMUNITY_LINKS = {
     "website": "https://aimug.org",
     "discord": "https://discord.gg/JzWgadPFQd",
     "twitter": "https://twitter.com/AustinLangChain",
-    "youtube": "https://www.youtube.com/@austinlangchain",
+    "youtube": "https://www.youtube.com/@AI-MUG",
     "meetup": "https://www.meetup.com/austin-langchain-ai-group/",
-    "subscribe": "https://buttondown.com/aimug"
+    "subscribe": "https://newsletter.aimug.org/"
 }
 
 # Motivational quotes pool
@@ -173,9 +175,11 @@ Formatting guidelines:
         html_sections = []
 
         for section in draft.sections:
-            # Convert content to HTML paragraphs
-            paragraphs = section.content.split('\n\n')
-            content_html = '\n'.join(f'<p>{p.strip()}</p>' for p in paragraphs if p.strip())
+            # Convert markdown content to HTML
+            content_html = markdown.markdown(
+                section.content,
+                extensions=['extra', 'nl2br']
+            )
 
             section_html = f"""
             <section class="newsletter-section">

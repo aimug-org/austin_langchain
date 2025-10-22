@@ -145,6 +145,7 @@ class NewsletterWorkflow:
             "technical_analysis": {},
             "writer_feedback": [],
             "newsletter_draft": None,
+            "formatted_content": {},  # html, markdown, text
             "quality_metrics": {},
             "current_step": "research",
             "iteration_count": 0,
