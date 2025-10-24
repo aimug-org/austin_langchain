@@ -1,0 +1,40 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    gcc \
+    g++ \
+    git \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Poetry
+RUN pip install poetry==1.7.1
+
+# Configure Poetry
+ENV POETRY_NO_INTERACTION=1 \
+    POETRY_VENV_IN_PROJECT=1 \
+    POETRY_CACHE_DIR=/tmp/poetry_cache
+
+# Copy Poetry files
+COPY pyproject.toml poetry.lock* ./
+
+# Install dependencies
+RUN poetry install --no-root && rm -rf $POETRY_CACHE_DIR
+
+# Copy source code
+COPY . .
+
+# Install project in editable mode
+RUN poetry install
+
+# Expose port for development server
+EXPOSE 8000
+
+# Set Python path
+ENV PYTHONPATH=/app/src
+
+# Development command (will be overridden by docker-compose)
+CMD ["poetry", "run", "python", "-m", "discord_bot.main"]

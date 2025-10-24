@@ -1,0 +1,70 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: discord_bot_db
+    environment:
+      POSTGRES_USER: discord_bot
+      POSTGRES_PASSWORD: dev_password
+      POSTGRES_DB: austin_langchain_bot
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U discord_bot"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: discord_bot_redis
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  discord_bot:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: austin_langchain_bot
+    environment:
+      - ENVIRONMENT=development
+      - DATABASE_URL=postgresql://discord_bot:dev_password@postgres:5432/austin_langchain_bot
+      - REDIS_URL=redis://redis:6379
+    volumes:
+      - ./src:/app/src
+      - ./tests:/app/tests
+      - ./alembic:/app/alembic
+      - ./.env:/app/.env
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    command: python -m discord_bot.main
+    restart: unless-stopped
+
+  adminer:
+    image: adminer:4.8.1
+    container_name: discord_bot_adminer
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    environment:
+      ADMINER_DEFAULT_SERVER: postgres
+
+volumes:
+  postgres_data:
+    external: true
+    name: discord_aimug_bot_postgres_data
